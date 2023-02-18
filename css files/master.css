@@ -1,0 +1,142 @@
+/* start variables */
+:root{
+  --main-color:#272325;
+  --main-transition-duration: 0.4s;
+}
+/* End variables */
+/* Start Global Rules */
+  * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: "Work Sans", sans-serif;
+  }
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* Small */
+  @media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  /* Medium */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+/* End Global Rules */
+/* stat landing */
+  header{
+    display: flex;
+    justify-content: space-between;
+  }
+  header h2{
+    text-transform: uppercase;
+    font-size: 25px;
+    transition: var(--main-transition-duration);
+  }
+  header ul{
+  list-style: none;
+  display: flex;
+    justify-content: space-between;
+  }
+  header ul a{
+    text-decoration: none;
+    margin: 0px 10px;
+    color: var(--main-color);
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  header ul li{
+    transition: var(--main-transition-duration);
+  }
+  header ul li:hover,
+  header h2:hover,
+  main .text a:hover{
+    transform: scale(1.3);
+    cursor: pointer;
+  }
+  main{ 
+    height: 100vh;
+    background-image: url(../imgs/architect-3979490.jpg);
+    background-size: cover;
+  }
+  main{
+    position: relative;
+    align-items: center;
+  }
+  main .text{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  main .text p:first-of-type{
+    font-size: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--main-color);
+    text-align: center;
+  }
+  main .text p:last-of-type{
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--main-color);
+    text-align: center;
+  }
+  main .text a{
+    text-decoration: none;
+    background-color: var(--main-color);
+    padding: 20px;
+    text-transform: uppercase;
+    color: white;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    transition: var(--main-transition-duration);
+  }
+  @media (max-width:767px){
+    header h2{
+      margin: 20px 5px;
+      font-size: 12px;
+    }
+    header ul a{
+      font-size: 10px;
+    }
+    header ul{
+      margin-right: 10px;
+    }
+    main .text p:first-of-type{
+      font-size: 25px;
+    }
+    main .text p:last-of-type{
+      font-size: 12px;
+    }
+    main .text a{
+      font-size: 10px;
+      text-align: center;
+      padding: 10px;
+    }
+  }
+/* End landing */
